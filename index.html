@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="First Lab Petrenko Start Irpin">
+    <meta name="description" content="The First Lab about WEB HTML5">
+    <title>PetrenkoVVIK93</title>
+    
+</head>
+<body>
+    <p><h2>Петренко Владислав Вікторович</h2></p>
+    <p id="test" onclick="chStyle()">місто Київ, 2002 рік, 14 серпня</p>
+    <p class="test2" onclick="chStyle()">СШ №193 м.Києва, НТУУ "КПІ" ім. Сікорського</p>
+
+    <ul>
+        <li>Рибальство</li>
+        <li>Комп'ютерні ігри</li>
+        <li>Танці</li>
+    </ul> 
+
+    <ol>
+        <li>Франшиза Гарі Поттер</li>
+        <li>Відьмак</li>
+        <li>Форест Гамп</li>
+    </ol>
+
+    <p>Ірпíнь — місто України в передмісті Києва. Розташоване на річці Ірпінь. Центр Ірпінської міської громади. Найбільше місто у Бучанському районі Київської області.</p>
+    <a href="https://imr.gov.ua/for-citizens/misto-irpin"><img style="width: 30%;" src="irpin.jpg" alt="Irpin"></a>
+    <br>
+    <button onclick="btns()">Додати</button>
+    <button onclick="btns2()">Збільшити</button>
+    <button onclick="btns3()">Зменшити</button>
+    <button onclick="btns4()">Видалити</button>
+    <div id="inp"></div>
+
+    <script>
+        let i = 0;
+        function chStyle(){
+            if(i==0){
+                document.getElementById("test").innerHTML = '<p style="background-color: yellow; color: blue;">місто Київ, 2002 рік, 14 серпня</p>';
+                i++;
+            }
+            else if(i==1){
+                document.querySelector(".test2").innerHTML = '<p style="background-color: blue; color: yellow;">СШ №193 м.Києва, НТУУ "КПІ" ім. Сікорського</p>';
+                i++
+            }
+            else{
+                document.getElementById("test").innerHTML = '<p style="background-color: blue; color: yellow;">місто Київ, 2002 рік, 14 серпня</p>';
+                document.querySelector(".test2").innerHTML = '<p style="background-color: yellow; color: blue;">СШ №193 м.Києва, НТУУ "КПІ" ім. Сікорського</p>';
+            }
+        }
+        function btns(){
+            document.getElementById("inp").innerHTML = '<img src="irpin.jpg" alt="irpin" width="30%">';
+        }
+        function btns2(){
+            document.getElementById("inp").innerHTML = '<img src="irpin.jpg" alt="irpin" width="60%">';
+        }
+        function btns3(){
+            document.getElementById("inp").innerHTML = '<img src="irpin.jpg" alt="irpin" width="15%">';
+        }
+        function btns4(){
+            document.getElementById("inp").innerHTML = '';
+        }
+    </script>
+</body>
+</html>
